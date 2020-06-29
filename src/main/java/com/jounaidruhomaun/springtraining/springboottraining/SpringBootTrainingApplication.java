@@ -1,6 +1,10 @@
 package com.jounaidruhomaun.springtraining.springboottraining;
 
+import com.jounaidruhomaun.springtraining.springboottraining.data.entity.Guest;
+import com.jounaidruhomaun.springtraining.springboottraining.data.entity.Reservation;
 import com.jounaidruhomaun.springtraining.springboottraining.data.entity.Room;
+import com.jounaidruhomaun.springtraining.springboottraining.data.repository.GuestRepository;
+import com.jounaidruhomaun.springtraining.springboottraining.data.repository.ReservationRepository;
 import com.jounaidruhomaun.springtraining.springboottraining.data.repository.RoomRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -28,4 +32,24 @@ public class SpringBootTrainingApplication {
 		}
 
 	}
+
+    @RestController
+    @RequestMapping("/guests")
+    public class GuestController{
+        @Autowired
+        private GuestRepository guestRepository;
+
+        @GetMapping
+        public Iterable<Guest> getGuests(){return this.guestRepository.findAll();}
+    }
+
+    @RestController
+    @RequestMapping("/reservations")
+    public class ReservationController{
+        @Autowired
+        private ReservationRepository reservationRepository;
+
+        @GetMapping
+        public Iterable<Reservation> getReservations(){return this.reservationRepository.findAll();}
+    }
 }
