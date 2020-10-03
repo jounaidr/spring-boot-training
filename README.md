@@ -1,1 +1,2 @@
 # spring-boot-training
+A Java Spring Boot training course made by [Frank P Moley III](https://www.linkedin.com/in/frankmoley/?trk=lil_instructor) I completed during my placement at Clearswift. ([training course link](https://www.linkedin.com/learning-login/share?forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Flearning-spring-with-spring-boot-2%3Ftrk%3Dshare_ent_url&account=2169722)) 
